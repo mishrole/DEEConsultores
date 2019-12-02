@@ -83,7 +83,7 @@ h3 {
 
 .home-text {
     font-size: 13px;
-    line-height: 17px;
+    /*line-height: 17px;*/
     color: #134060;
 }
 
@@ -115,7 +115,39 @@ h3 {
 
 .table-services {
     margin-top: 1.5rem;
+    font-size: 0.8rem;
 }
+
+.services-text button{
+    /*font-size: 0.8rem !important;*/
+}
+
+.services-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.8rem;
+}
+
+.services-text, .services-list a {
+    font-size: 0.9rem;
+    color: #134060;
+    padding: 0.375rem 0;
+}
+
+.services-list a  {
+    font-weight: bold;
+    text-align: left;
+}
+
+.btn-link {
+    color: #0F3F61;
+    text-decoration: none;
+}
+
+.btn-link:hover, .btn-link:focus {
+    text-decoration: none;
+}
+
 
 /*  CLIENTES */
 
