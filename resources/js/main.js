@@ -438,7 +438,7 @@ let serviciosMobile = function(array, id) {
     let p = $("<p class='services-text'></p>");
     let button = $("<button class='btn btn-link' type='button' data-toggle='collapse' data-target='#accordion"+id+"' aria-expanded='false' aria-controls='accordion"+id+"'>"+array[0]+"<i class='fas fa-angle-down rotate-icon'></i></button>");
 
-    let cardContent = $("<div id='accordion"+id+"' class='collapse show' aria-labelledby='heading"+id+"' data-parent='#services'></div>");
+    let cardContent = $("<div id='accordion"+id+"' class='collapse' aria-labelledby='heading"+id+"' data-parent='#services'></div>");
     let cardBody = $("<div class='card-body'>"+array[1]+"<br>"+array[2]+"</div>");
 
     p.append(button);
@@ -572,6 +572,31 @@ $(document).ready(function() {
         }else if (selected == 2) {
             wrapperMobile.empty();
             sElaboracion.forEach(function(element, index){
+                wrapperMobile.append(serviciosMobile(element, index));
+            });
+        }else if (selected == 3) {
+            wrapperMobile.empty();
+            sEvaluacion.forEach(function(element, index) {
+                wrapperMobile.append(serviciosMobile(element, index));
+            });
+        }else if (selected == 4) {
+            wrapperMobile.empty();
+            sAdministracion.forEach(function(element, index) {
+                wrapperMobile.append(serviciosMobile(element, index));
+            });
+        }else if (selected == 5) {
+            wrapperMobile.empty();
+            sProgramas.forEach(function(element, index) {
+                wrapperMobile.append(serviciosMobile(element, index));
+            });
+        }else if (selected == 6) {
+            wrapperMobile.empty();
+            sAnalisis.forEach(function(element, index) {
+                wrapperMobile.append(serviciosMobile(element, index));
+            });
+        }else {
+            wrapperMobile.empty();
+            sEstudios.forEach(function(element, index){
                 wrapperMobile.append(serviciosMobile(element, index));
             });
         }
