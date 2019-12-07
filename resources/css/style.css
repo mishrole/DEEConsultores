@@ -66,13 +66,29 @@ h2.amarillo {
     color: #FFC800;
 }
 
+.franja-amarillo {
+    background: url(../imagenes/franja-amarillo.gif) repeat-x bottom left;
+}
+
+.franja-gris {
+    background: url(../imagenes/franja-gris-2.jpg) repeat-x bottom left;
+}
+
+.franja-gris-up {
+    background: url(../imagenes/franja-gris-2.jpg) repeat-x top left;
+}
+
 h3 {
     font-family: 'titulo-bold';
     color: #0F3F61;
     line-height: 36px;
     padding-bottom: 3.3rem;
     font-size: 1.2rem;
-    background: url(../imagenes/franja-gris-2.jpg) repeat-x bottom left;
+    height: 1rem;
+}
+
+h4 {
+    padding-bottom: 1rem;
     height: 1rem;
 }
 
@@ -136,12 +152,6 @@ tbody {
     background: url(../imagenes/franja-gris-2.jpg) repeat-x top left;
 }
 
-/*
-.services-text button{
-    font-size: 0.8rem !important;
-}
-*/
-
 .table th, .table td {
     vertical-align: middle;
 }
@@ -200,12 +210,60 @@ tbody {
     text-align: left;
 }
 
-
 /*  CLIENTES */
 
 .customers-text {
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #cccccc;
+    /*border-bottom: 1px solid #cccccc;*/
+    border-bottom: 1px solid #FFC800;
+}
+
+/*  EQUIPO */
+
+.team-side-text {
+    padding-bottom: 1.5rem;
+    /*border-bottom: 1px solid #cccccc;*/
+    border-bottom: 1px solid #FFC800;
+}
+
+.team-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.8rem;
+    padding-bottom: 1.5rem;
+}
+
+.team-list a  {
+    font-weight: bold;
+    text-align: left;
+    padding: 0.25rem 0;
+}
+
+.team-text {
+    padding: 0.375rem 0;
+}
+
+.team-text, .team-list a {
+    font-size: 0.8rem;
+    color: #134060;
+}
+
+.wrapper-team-image {
+    padding-top: 4.2rem;
+}
+
+.wrapper-desktop-team {
+    padding-top: 0;
+    background-color: #ebebeb;
+}
+
+.team-mail {
+    font-size: 0.8rem;
+    color: #134060;
+}
+
+.wrapper-desktop-team p.wrapper-desktop-text {
+    padding-left: 1rem;
 }
 
 /*  FOOTER  */
@@ -337,6 +395,8 @@ ul.footer-social-list {
         font-size: 1.5rem;
     }
 }
+
+/*  FONT FACE */
 
 @font-face {
     font-family: 'helvetica-bold';
