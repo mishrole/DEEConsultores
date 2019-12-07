@@ -625,6 +625,7 @@ $(document).ready(function() {
         wrapperMobile.append(serviciosMobile(element, index));
     });
 
+    // Cargar elementos de Equipo en Desktop al inicio
     sAlcides.forEach(function(element) {
         wrapperTeam.append(equipoDesktop(element));
     })
@@ -708,7 +709,6 @@ $(document).ready(function() {
     });
 
     // Cargar elementos de Equipo en función al link del menú en Desktop
-
     teamList.find('a').eq(0).click(function() {
         teamListColor($(this));
         wrapperTeam.empty();
