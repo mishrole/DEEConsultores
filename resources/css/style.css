@@ -266,6 +266,24 @@ tbody {
     padding-left: 1rem;
 }
 
+.team-text-mobile {
+    padding-bottom: 2rem;
+}
+
+.card-team-mobile {
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.card.card-team-mobile {
+    border: none;
+}
+
+.card-team-mobile .card-body {
+    background-color: #E3E3E3;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
 /*  FOOTER  */
 
 .footer-container {
@@ -355,6 +373,14 @@ ul.footer-social-list {
     }
     h2 {
         font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .card.card-team-mobile:nth-child(n)/*,
+    .card.card-team-mobile:nth-child(5)*/ {
+        margin-left: 1.85rem;
+        margin-right: 1.85rem;
     }
 }
 

@@ -524,52 +524,6 @@ const sMiguel =
    ]
 ];
 
-const socios = 
-[
-    ["Alcides Velazco Gonzales",
-     "Socio",
-     "Especialista en Proyectos del Sector Transportes y Obras Civiles",
-     "alcides.velazco@deeconsultores.pe",
-     "Consultor internacional, experto en diseño y formulación de proyectos y programas de infraestructura. Líder en la preparación de Estudios de Preinversión e Ingeniería de Detalle para proyectos del sector público y privado."
-     + "<br><br>" +
-     "Ha sido Gerente de Planificación de Provías Nacional y Asesor de la Oficina General de Planificación y Presupuesto del Ministerio de Transportes y Comunicaciones y consultor de organismos multilaterales de financiamiento para el diseño de proyectos y programas de inversión en Argentina, Bolivia, Honduras, Perú y Paraguay."
-     + "<br><br>" +
-     "Ingeniero Civil, Master en Ingeniería Vial, con postgrado en Gestión de Proyectos, miembro del Project Managment Institute y profesor del Programa de Maestría de Ingeniería Vial de la Universidad de Piura.",
-     "resources/imagenes/alcides.jpg"
-    ],
-    ["Fernando Valenzuela Sumarriva",
-     "Socio",
-     "Especialista en Proyectos del Sector Energía, Competitividad e Innovación",
-     "fernando.valenzuela@deeconsultores.pe",
-     "Acredita más 20 años de experiencia en el ámbito público y privado, Consultor en análisis, diseño, formulación y evaluación de políticas, estrategias y proyectos del sector público, Sectorista de Energía y Minas, Producción y Turismo en la Dirección General de Programación Multianual del Ministerio de Economía y Finanzas, Director de Inversiones del Ministerio de Agricultura, consultor de Apoyo Consultoría, entre otros cargos."
-     + "<br><br>" +
-     "Bachiller en Economía de la Pontificia Universidad Católica del Perú, Magister en Administración de ESAN y MSc. de University of Southampton, con estudios de especialización en Evaluación de Proyectos de Harvard University",
-     "resources/imagenes/fernando.jpg"
-    ],
-    ["Gustavo Guerra-García Picasso",
-     "Socio",
-     "Especialista en Gestión Pública y Sector Transportes",
-     "gustavo.guerragarcia@deeconsultores.pe",
-     "Cuenta más de 20 años en gestión privada y pública. Ha trabajado para organismos internacionales (BM, BIRF, BID, CAF y otros) en Perú, Panamá, Ecuador, Colombia, Venezuela, Bolivia, Surinam y Guyana. Experto en análisis institucional y formulación de proyectos. Amplia experiencia en reestructuraciones de empresas públicas, ministerios del gobierno nacional y entidades regionales."
-     + "<br><br>" +
-     "En el 2001 ocupó el cargo de Director General de Coordinación Intersectorial de la Presidencia del Consejo de Ministros. Ha sido Vice ministro de Transportes (2001-2002) y se ha desempeñado como Secretario Técnico de la Asamblea Nacional de Gobiernos Regionales - ANGR. Ex-presidente del Directorio de Protransporte de la Municipalidad de Lima Metropolitana. Por su experiencia y su formación, cuenta con sólidas competencias en análisis de viabilidad institucional, económica y financiera."
-     + "<br><br>" +
-     "Economista egresado de la Pontifica Universidad Católica del Perú en 1989, con maestría en Políticas Públicas de la Universidad de Georgetown (Washington DC) en 1994. Es profesor del Programa de Gobernabilidad y Gerencia Política de la Pontificia Universidad Católica del Perú.",
-     "resources/imagenes/gustavo.jpg"
-    ],
-    ["Miguel Prialé Ugás",
-     "Socio",
-     "Especialista de Gestión Pública y de Proyectos en el Sector Agrario y Ambiental",
-     "miguel.priale@deeconsultores.pe",
-     "Experiencia en evaluación, formulación y seguimiento de políticas públicas y proyectos de inversión. Especialista en gestión pública, evaluación social de proyectos, comercio internacional y reformas para la descentralización del Estado."
-     + "<br><br>" +
-     "Acredita más de 14 años de experiencia en gestión pública y privada. Fue responsable del SNIP del 2006 al 2008, como Director General de Programación Multianual del Ministerio de Economía y Finanzas. También se desempeño como Director de Inversiones del Ministerio de Agricultura (2001 - 2003). Ha sido gerente del Proyecto 'Unidades de Gestión Municipal' (2008-2009) ejecutado por Macroconsult y financiado por el Fondo Minero Antamina. En el año 2011 se desempeñó como Gerente General de la Municipalidad Metropolitana de Lima y Presidente del Directorio de EMAPE (2011-2012)."
-     + "<br><br>" +
-     "Master en Economía Aplicada por el Institut d´Etudes Politiques de Paris (Sciences Po). Post Grado en Administración Pública y Especialización en Negociación Internacional como diplomado de Ecole Nationale de Administration (ENA Francia). Ha sido profesor de la Facultad de Ciencias Sociales - Economía de la PUCP y de la Facultad de Ciencias Económicas de la Universidad San Martín de Porres. Actualmente es profesor en la Escuela de Post Grado en Gestión Pública de la Universidad del Pacífico.",
-     "resources/imagenes/miguel.jpg"
-    ]
-];
-
 let equipoImagen = function(url) {
 
     let img = $("<img class='img-fluid' src='" + url +"'>");
@@ -594,13 +548,87 @@ let equipoDesktop = function(array) {
     return div0;
 }
 
+const socios = 
+[
+    ["Alcides Velazco Gonzales",
+     "Socio",
+     "Especialista en Proyectos del Sector Transportes y Obras Civiles",
+     "alcides.velazco@deeconsultores.pe",
+     "Consultor internacional, experto en diseño y formulación de proyectos y programas de infraestructura. Líder en la preparación de Estudios de Preinversión e Ingeniería de Detalle para proyectos del sector público y privado."
+     + "<br><br>" +
+     "Ha sido Gerente de Planificación de Provías Nacional y Asesor de la Oficina General de Planificación y Presupuesto del Ministerio de Transportes y Comunicaciones y consultor de organismos multilaterales de financiamiento para el diseño de proyectos y programas de inversión en Argentina, Bolivia, Honduras, Perú y Paraguay."
+     + "<br><br>" +
+     "Ingeniero Civil, Master en Ingeniería Vial, con postgrado en Gestión de Proyectos, miembro del Project Managment Institute y profesor del Programa de Maestría de Ingeniería Vial de la Universidad de Piura.",
+     "resources/imagenes/team-alcides.jpg"
+    ],
+    ["Fernando Valenzuela Sumarriva",
+     "Socio",
+     "Especialista en Proyectos del Sector Energía, Competitividad e Innovación",
+     "fernando.valenzuela@deeconsultores.pe",
+     "Acredita más 20 años de experiencia en el ámbito público y privado, Consultor en análisis, diseño, formulación y evaluación de políticas, estrategias y proyectos del sector público, Sectorista de Energía y Minas, Producción y Turismo en la Dirección General de Programación Multianual del Ministerio de Economía y Finanzas, Director de Inversiones del Ministerio de Agricultura, consultor de Apoyo Consultoría, entre otros cargos."
+     + "<br><br>" +
+     "Bachiller en Economía de la Pontificia Universidad Católica del Perú, Magister en Administración de ESAN y MSc. de University of Southampton, con estudios de especialización en Evaluación de Proyectos de Harvard University",
+     "resources/imagenes/team-fernando.jpg"
+    ],
+    ["Gustavo Guerra-García Picasso",
+     "Socio",
+     "Especialista en Gestión Pública y Sector Transportes",
+     "gustavo.guerragarcia@deeconsultores.pe",
+     "Cuenta más de 20 años en gestión privada y pública. Ha trabajado para organismos internacionales (BM, BIRF, BID, CAF y otros) en Perú, Panamá, Ecuador, Colombia, Venezuela, Bolivia, Surinam y Guyana. Experto en análisis institucional y formulación de proyectos. Amplia experiencia en reestructuraciones de empresas públicas, ministerios del gobierno nacional y entidades regionales."
+     + "<br><br>" +
+     "En el 2001 ocupó el cargo de Director General de Coordinación Intersectorial de la Presidencia del Consejo de Ministros. Ha sido Vice ministro de Transportes (2001-2002) y se ha desempeñado como Secretario Técnico de la Asamblea Nacional de Gobiernos Regionales - ANGR. Ex-presidente del Directorio de Protransporte de la Municipalidad de Lima Metropolitana. Por su experiencia y su formación, cuenta con sólidas competencias en análisis de viabilidad institucional, económica y financiera."
+     + "<br><br>" +
+     "Economista egresado de la Pontifica Universidad Católica del Perú en 1989, con maestría en Políticas Públicas de la Universidad de Georgetown (Washington DC) en 1994. Es profesor del Programa de Gobernabilidad y Gerencia Política de la Pontificia Universidad Católica del Perú.",
+     "resources/imagenes/team-gustavo.jpg"
+    ],
+    ["Miguel Prialé Ugás",
+     "Socio",
+     "Especialista de Gestión Pública y de Proyectos en el Sector Agrario y Ambiental",
+     "miguel.priale@deeconsultores.pe",
+     "Experiencia en evaluación, formulación y seguimiento de políticas públicas y proyectos de inversión. Especialista en gestión pública, evaluación social de proyectos, comercio internacional y reformas para la descentralización del Estado."
+     + "<br><br>" +
+     "Acredita más de 14 años de experiencia en gestión pública y privada. Fue responsable del SNIP del 2006 al 2008, como Director General de Programación Multianual del Ministerio de Economía y Finanzas. También se desempeño como Director de Inversiones del Ministerio de Agricultura (2001 - 2003). Ha sido gerente del Proyecto 'Unidades de Gestión Municipal' (2008-2009) ejecutado por Macroconsult y financiado por el Fondo Minero Antamina. En el año 2011 se desempeñó como Gerente General de la Municipalidad Metropolitana de Lima y Presidente del Directorio de EMAPE (2011-2012)."
+     + "<br><br>" +
+     "Master en Economía Aplicada por el Institut d´Etudes Politiques de Paris (Sciences Po). Post Grado en Administración Pública y Especialización en Negociación Internacional como diplomado de Ecole Nationale de Administration (ENA Francia). Ha sido profesor de la Facultad de Ciencias Sociales - Economía de la PUCP y de la Facultad de Ciencias Económicas de la Universidad San Martín de Porres. Actualmente es profesor en la Escuela de Post Grado en Gestión Pública de la Universidad del Pacífico.",
+     "resources/imagenes/team-miguel.jpg"
+    ]
+];
+
+/*
+<div class="card">
+    <img src="resources/imagenes/alcides.jpg" alt="" class="card-img-top">
+    <div class="card-body">
+        <p class="card-text font-weight-bold">Alcides Velazco Gonzales <br> Socio</p>
+    </div>
+</div>
+*/
+
+let equipoMobile = function(array) {
+
+    let div0 = $("<div class='card card-team-mobile col-sm-12 col-md-5'></div>");
+    let div1 = $("<div class='card-team-mobile-image'></div>");
+    let img = $("<img src='" + array[5] + "' class='card-img-top'>");
+    let div2 = $("<div class='card-body'></div>");
+    let p0 = $("<p class='card-text font-weight-bold'>" + array[0] + "<br>" + array[1] + "</p>");
+
+    div1.append(img);
+    div2.append(p0);
+    div0.append(div1, div2);
+
+    return div0;
+}
+
 // Wrappers existentes en el DOM
 let wrapperDesktop = $(".wrapper-desktop");
 let wrapperMobile = $(".wrapper-mobile");
 let wrapperDesktopTitle = $(".wrapper-services-header");
-let wrapperTeam = $(".wrapper-team");
+
+let wrapperTeamDesktop = $(".wrapper-team-desktop");
 let wrapperTeamImage = $(".wrapper-team-image");
 
+let wrapperTeamMobile = $(".wrapper-team-mobile");
+
+let teamContentMobile = $(".team-content-mobile");
 
 // Menú de Servicios en Desktop
 let servicesList = $(".services-list");
@@ -610,6 +638,15 @@ let teamList = $(".team-list");
 
 
 $(document).ready(function() {
+
+    socios.forEach(function(element) {
+        teamContentMobile.append(equipoMobile(element))
+    });
+
+    const cardMobile = $(".card-team-mobile");
+
+    //cardMobile.eq(1).css("margin-left", "5.3rem");
+    //cardMobile.eq(3).css("margin-left", "5.3rem");
 
     // Cargar título de Servicios en Desktop al inicio
     servicesList.find('a').eq(0).css("color", "#909090");
@@ -627,8 +664,11 @@ $(document).ready(function() {
 
     // Cargar elementos de Equipo en Desktop al inicio
     sAlcides.forEach(function(element) {
-        wrapperTeam.append(equipoDesktop(element));
+        wrapperTeamDesktop.append(equipoDesktop(element));
     })
+
+    // Color en primer enlace del Menú de Equipo en Desktop
+    teamListColor(teamList.find('a').eq(0));
 
     // Cargar elementos de Servicios en función al link del menú en Desktop
     servicesList.find('a').eq(0).click(function() {
@@ -711,40 +751,40 @@ $(document).ready(function() {
     // Cargar elementos de Equipo en función al link del menú en Desktop
     teamList.find('a').eq(0).click(function() {
         teamListColor($(this));
-        wrapperTeam.empty();
+        wrapperTeamDesktop.empty();
         wrapperTeamImage.empty();
         sAlcides.forEach(function(element) {
-            wrapperTeam.append(equipoDesktop(element));
+            wrapperTeamDesktop.append(equipoDesktop(element));
         });
         return false;
     });
 
     teamList.find('a').eq(1).click(function() {
         teamListColor($(this));
-        wrapperTeam.empty();
+        wrapperTeamDesktop.empty();
         wrapperTeamImage.empty();
         sFernando.forEach(function(element) {
-            wrapperTeam.append(equipoDesktop(element));
+            wrapperTeamDesktop.append(equipoDesktop(element));
         });
         return false;
     });
 
     teamList.find('a').eq(2).click(function() {
         teamListColor($(this));
-        wrapperTeam.empty();
+        wrapperTeamDesktop.empty();
         wrapperTeamImage.empty();
         sGustavo.forEach(function(element) {
-            wrapperTeam.append(equipoDesktop(element));
+            wrapperTeamDesktop.append(equipoDesktop(element));
         });
         return false;
     });
 
     teamList.find('a').eq(3).click(function() {
         teamListColor($(this));
-        wrapperTeam.empty();
+        wrapperTeamDesktop.empty();
         wrapperTeamImage.empty();
         sMiguel.forEach(function(element) {
-            wrapperTeam.append(equipoDesktop(element));
+            wrapperTeamDesktop.append(equipoDesktop(element));
         });
         return false;
     });
