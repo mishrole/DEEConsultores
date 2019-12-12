@@ -513,7 +513,7 @@ const sMiguel =
 [
     ["Miguel Prialé Ugás",
     "Socio",
-    "Especialista de Gestión Pública y de Proyectos en el Sector Agrario y Ambiental",
+    "Especialista en Gestión Pública y de Proyectos en el Sector Agrario y Ambiental",
     "miguel.priale@deeconsultores.pe",
     "Experiencia en evaluación, formulación y seguimiento de políticas públicas y proyectos de inversión. Especialista en gestión pública, evaluación social de proyectos, comercio internacional y reformas para la descentralización del Estado."
     + "<br><br>" +
@@ -583,7 +583,7 @@ const socios =
     ],
     ["Miguel Prialé Ugás",
      "Socio",
-     "Especialista de Gestión Pública y de Proyectos en el Sector Agrario y Ambiental",
+     "Especialista en Gestión Pública y de Proyectos en el Sector Agrario y Ambiental",
      "miguel.priale@deeconsultores.pe",
      "Experiencia en evaluación, formulación y seguimiento de políticas públicas y proyectos de inversión. Especialista en gestión pública, evaluación social de proyectos, comercio internacional y reformas para la descentralización del Estado."
      + "<br><br>" +
@@ -603,9 +603,10 @@ const socios =
 </div>
 */
 
-let equipoMobile = function(array) {
+let equipoMobile = function(array, index) {
 
-    let div0 = $("<div class='card card-team-mobile col-sm-12 col-md-5'></div>");
+    let div0 = $("<div class='card card-team-mobile col-sm-12 col-md-5' data-clickable='true' data-toggle='modal' data-target='#team-modal-"+index+"'></div>");
+    //let div0 = $("<div class='card card-team-mobile col-sm-12 col-md-5' data-clickable='true'></div>");
     let div1 = $("<div class='card-team-mobile-image'></div>");
     let img = $("<img src='" + array[5] + "' class='card-img-top'>");
     let div2 = $("<div class='card-body'></div>");
@@ -636,14 +637,7 @@ let servicesList = $(".services-list");
 // Menú de Equipo en Desktop
 let teamList = $(".team-list");
 
-
 $(document).ready(function() {
-
-    socios.forEach(function(element) {
-        teamContentMobile.append(equipoMobile(element))
-    });
-
-    const cardMobile = $(".card-team-mobile");
 
     //cardMobile.eq(1).css("margin-left", "5.3rem");
     //cardMobile.eq(3).css("margin-left", "5.3rem");
@@ -660,6 +654,11 @@ $(document).ready(function() {
     // Cargar acordeón de Servicios en Mobile al inicio
     sFormulacion.forEach(function(element, index){
         wrapperMobile.append(serviciosMobile(element, index));
+    });
+
+    // Cargar elementos de Equipo en Mobile al inicio
+    socios.forEach(function(element, index) {
+        teamContentMobile.append(equipoMobile(element, index))
     });
 
     // Cargar elementos de Equipo en Desktop al inicio
