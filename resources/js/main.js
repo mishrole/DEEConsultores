@@ -595,17 +595,18 @@ const socios =
 ];
 
 /*
-<div class="card">
-    <img src="resources/imagenes/alcides.jpg" alt="" class="card-img-top">
-    <div class="card-body">
-        <p class="card-text font-weight-bold">Alcides Velazco Gonzales <br> Socio</p>
-    </div>
-</div>
+            ###     NOTAS   ###
+
+    - Revisar el arreglo de Socios y los arreglos independientes de cada Socio.
+        En Desktop se consume por socio un arreglo independiente con su data
+        En Mobile, los cards usan el arreglo Socios, pero el modal no es dinámico
+    
+    - Implementar: usar card como botón para llamar al modal y llenar la plantilla con el arreglo independiente
 */
 
 let equipoMobile = function(array, index) {
 
-    let div0 = $("<div class='card card-team-mobile col-sm-12 col-md-5' data-clickable='true' data-toggle='modal' data-target='#team-modal-"+index+"'></div>");
+    let div0 = $("<div class='card card-team-mobile col-sm-12 col-md-5' data-clickable='true' data-toggle='modal' data-target='#team-modal' id='card-team-"+index+"'></div>");
     //let div0 = $("<div class='card card-team-mobile col-sm-12 col-md-5' data-clickable='true'></div>");
     let div1 = $("<div class='card-team-mobile-image'></div>");
     let img = $("<img src='" + array[5] + "' class='card-img-top'>");
@@ -619,21 +620,43 @@ let equipoMobile = function(array, index) {
     return div0;
 }
 
+let equipoMobileModal = function(array) {
+    
+    let div0 = $("<div class='modal fade' id='team-modal' tabindex='-1' role='dialog' aria-hidden='true'></div>");
+
+    let div1 = $("<div class='modal-dialog modal-dialog-centered' role='document'></div>");
+    let div2 = $("<div class='modal-content'></div>");
+    let div3 = $("<div class='modal-header'>");
+    let h5 = $("<h5 class='modal-title team-text font-weight-bold'>" + array[0] + "<br>" + array[2] + "<br>" + "<a class='modal-title team-mail' href='mailto:" + array[3] + "'>" + "<br>" + array[3] + "</a></h5>");
+
+    let div4 = $("<div class='modal-body'></div>");
+    let p0 = $("<p class='modal-text team-text'>" + array[4] +"</p>");
+
+    let div5 = $("<div class='modal-footer'></div>");
+    let button0 = $("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Cerrar</button>");
+
+    div3.append(h5);
+    div4.append(p0);
+    div5.append(button0);
+
+    div2.append(div3, div4, div5);
+    div1.append(div2);
+
+    div0.append(div1);
+
+    return div0;
+}
+
 // Wrappers existentes en el DOM
 let wrapperDesktop = $(".wrapper-desktop");
 let wrapperMobile = $(".wrapper-mobile");
 let wrapperDesktopTitle = $(".wrapper-services-header");
-
 let wrapperTeamDesktop = $(".wrapper-team-desktop");
 let wrapperTeamImage = $(".wrapper-team-image");
-
 let wrapperTeamMobile = $(".wrapper-team-mobile");
-
 let teamContentMobile = $(".team-content-mobile");
-
 // Menú de Servicios en Desktop
 let servicesList = $(".services-list");
-
 // Menú de Equipo en Desktop
 let teamList = $(".team-list");
 
@@ -829,4 +852,37 @@ $(document).ready(function() {
             });
         }
     });
+
+    $(".card-team-mobile").eq(0).click(function() {
+        $("#team-modal-wrapper").empty();
+        sAlcides.forEach(function(element) {
+            $("#team-modal-wrapper").append(equipoMobileModal(element));
+        });
+    });
+
+    $(".card-team-mobile").eq(1).click(function() {
+        $("#team-modal-wrapper").empty();
+        sFernando.forEach(function(element) {
+            $("#team-modal-wrapper").append(equipoMobileModal(element));
+        });
+    });
+
+    $(".card-team-mobile").eq(2).click(function() {
+        $("#team-modal-wrapper").empty();
+        sGustavo.forEach(function(element) {
+            $("#team-modal-wrapper").append(equipoMobileModal(element));
+        });
+    });
+
+    $(".card-team-mobile").eq(3).click(function() {
+        $("#team-modal-wrapper").empty();
+        sMiguel.forEach(function(element) {
+            $("#team-modal-wrapper").append(equipoMobileModal(element));
+        });
+    });
+/*
+    $(".card-team-mobile").click(function(event) {
+        alert("click")
+        $("#test").modal();
+    });*/
 });
