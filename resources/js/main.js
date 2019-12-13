@@ -478,7 +478,7 @@ const sAlcides =
      "Ha sido Gerente de Planificación de Provías Nacional y Asesor de la Oficina General de Planificación y Presupuesto del Ministerio de Transportes y Comunicaciones y consultor de organismos multilaterales de financiamiento para el diseño de proyectos y programas de inversión en Argentina, Bolivia, Honduras, Perú y Paraguay."
      + "<br><br>" +
      "Ingeniero Civil, Master en Ingeniería Vial, con postgrado en Gestión de Proyectos, miembro del Project Managment Institute y profesor del Programa de Maestría de Ingeniería Vial de la Universidad de Piura.",
-     "resources/imagenes/alcides.jpg"
+     "resources/imagenes/team-alcides.jpg"
     ]
 ];
 
@@ -491,7 +491,7 @@ const sFernando =
      "Acredita más 20 años de experiencia en el ámbito público y privado, Consultor en análisis, diseño, formulación y evaluación de políticas, estrategias y proyectos del sector público, Sectorista de Energía y Minas, Producción y Turismo en la Dirección General de Programación Multianual del Ministerio de Economía y Finanzas, Director de Inversiones del Ministerio de Agricultura, consultor de Apoyo Consultoría, entre otros cargos."
      + "<br><br>" +
      "Bachiller en Economía de la Pontificia Universidad Católica del Perú, Magister en Administración de ESAN y MSc. de University of Southampton, con estudios de especialización en Evaluación de Proyectos de Harvard University",
-     "resources/imagenes/fernando.jpg"
+     "resources/imagenes/team-fernando.jpg"
     ]
 ];
 
@@ -506,7 +506,7 @@ const sGustavo =
      "En el 2001 ocupó el cargo de Director General de Coordinación Intersectorial de la Presidencia del Consejo de Ministros. Ha sido Vice ministro de Transportes (2001-2002) y se ha desempeñado como Secretario Técnico de la Asamblea Nacional de Gobiernos Regionales - ANGR. Ex-presidente del Directorio de Protransporte de la Municipalidad de Lima Metropolitana. Por su experiencia y su formación, cuenta con sólidas competencias en análisis de viabilidad institucional, económica y financiera."
      + "<br><br>" +
      "Economista egresado de la Pontifica Universidad Católica del Perú en 1989, con maestría en Políticas Públicas de la Universidad de Georgetown (Washington DC) en 1994. Es profesor del Programa de Gobernabilidad y Gerencia Política de la Pontificia Universidad Católica del Perú.",
-     "resources/imagenes/gustavo.jpg"
+     "resources/imagenes/team-gustavo.jpg"
     ]
 ];
 
@@ -521,7 +521,7 @@ const sMiguel =
     "Acredita más de 14 años de experiencia en gestión pública y privada. Fue responsable del SNIP del 2006 al 2008, como Director General de Programación Multianual del Ministerio de Economía y Finanzas. También se desempeño como Director de Inversiones del Ministerio de Agricultura (2001 - 2003). Ha sido gerente del Proyecto 'Unidades de Gestión Municipal' (2008-2009) ejecutado por Macroconsult y financiado por el Fondo Minero Antamina. En el año 2011 se desempeñó como Gerente General de la Municipalidad Metropolitana de Lima y Presidente del Directorio de EMAPE (2011-2012)."
     + "<br><br>" +
     "Master en Economía Aplicada por el Institut d´Etudes Politiques de Paris (Sciences Po). Post Grado en Administración Pública y Especialización en Negociación Internacional como diplomado de Ecole Nationale de Administration (ENA Francia). Ha sido profesor de la Facultad de Ciencias Sociales - Economía de la PUCP y de la Facultad de Ciencias Económicas de la Universidad San Martín de Porres. Actualmente es profesor en la Escuela de Post Grado en Gestión Pública de la Universidad del Pacífico.",
-    "resources/imagenes/miguel.jpg"
+    "resources/imagenes/team-miguel.jpg"
    ]
 ];
 
