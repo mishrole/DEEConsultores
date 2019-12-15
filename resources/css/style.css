@@ -99,7 +99,8 @@ h4 {
 .services-content,
 .customers-content,
 .team-content,
-.contact-content {
+.contact-content,
+.articles-content {
     margin-top: 3.5rem;
 }
 
@@ -107,7 +108,8 @@ h4 {
 .services-content-container,
 .customers-content-container,
 .team-content-container,
-.contact-content-container {
+.contact-content-container,
+.articles-content-container {
     margin-top: 1.5rem;
 }
 
@@ -177,13 +179,14 @@ tbody {
     border: none;*/
 }
 
-.services-list {
+.services-list,
+.articles-list {
     list-style: none;
     padding-left: 0;
     margin-top: 1.8rem;
 }
 
-.services-text, .services-list a {
+.services-text, .services-list a, .articles-list a {
     font-size: 0.8rem;
     color: #134060;
 }
@@ -192,7 +195,8 @@ tbody {
     padding: 0.375rem 0;
 }
 
-.services-list a  {
+.services-list a,
+.articles-list a  {
     font-weight: bold;
     text-align: left;
     padding: 0.25rem 0;
@@ -209,6 +213,13 @@ tbody {
 
 .btn-link-services {
     text-align: left;
+}
+
+/*  ARTÍCULOS */
+
+.articles-list {
+    margin-top: 0 !important;
+    padding: 0.375rem 0;;
 }
 
 /*  CLIENTES */
