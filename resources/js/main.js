@@ -994,4 +994,25 @@ $(document).ready(function() {
         return false;
     });
 
+    $("#phone").keypress(function(evento) {
+        let charCode = (evento.which) ? evento.which : evento.keyCode
+
+        if(charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+
+        return true;
+
+    });
+
+    $("#name").keypress(function(evento) {
+        let charCode = (evento.which) ? evento.which : evento.keyCode
+
+        if((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8 || charCode == 32) {
+            return true;
+        }
+
+        return false;
+    });
+
 });
