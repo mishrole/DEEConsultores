@@ -137,6 +137,7 @@ h4 {
     font-weight: bold;
     color: #909090;
     font-size: 0.8rem;
+    float: right;
 }
 
 .article-link:hover {
@@ -322,6 +323,31 @@ tbody {
     padding-right: 0 !important;
 }
 
+/*  CONTACTO */
+
+.contact-text {
+    font-weight: normal !important;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #FFC800;
+}
+
+.contact-link {
+    color: #909090;
+    font-size: 0.8rem;
+}
+
+.contact-link:hover {
+    color: #0F3F61;
+}
+
+.contact-mail {
+    color: #FFFFFF;
+}
+
+.contact-mail:hover {
+    color: #FFFFFF;
+}
+
 /*  FOOTER  */
 
 .footer-container {
@@ -411,6 +437,12 @@ ul.footer-social-list {
     }
     h2 {
         font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .map-dialog {
+        max-width: 800px;
     }
 }
 

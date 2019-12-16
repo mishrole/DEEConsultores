@@ -1,3 +1,5 @@
+"use strict";
+
 // Arreglos de data de Servicios
 const sFormulacion = 
 [
@@ -611,6 +613,28 @@ let equipoMobileModal = function(array) {
     return div0;
 }
 
+let contactoMapaModal = _ => {
+    
+    let div0 = $("<div class='modal fade' id='contact-map-modal' tabindex='-1' role='dialog' aria-hidden='true'></div>");
+
+    let div1 = $("<div class='modal-dialog modal-dialog-centered map-dialog' role='document'></div>");
+    let div2 = $("<div class='modal-content map-content'></div>");
+    let div3 = $("<div class='modal-header'></div>");
+    let div4 = $("<div class='modal-body'></div>");
+    let iframe0 = $("<iframe class='col-sm-12' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.2790289233617!2d-77.04608008547332!3d-12.093040546054926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c85a135ce6bd%3A0xd673b89e4cdff5c3!2sCalle%20los%20Cedros%20285%2C%20San%20Isidro%2015073!5e0!3m2!1ses!2spe!4v1576518687547!5m2!1ses!2spe' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen=''></iframe>");
+    let div5 = $("<div class='modal-footer'></div>");
+    let button0 = $("<button class='btn btn-secondary' type='button' data-dismiss='modal'>Cerrar</button>");
+
+    div4.append(iframe0);
+    div5.append(button0);
+    div2.append(div3, div4, div5);
+    div1.append(div2);
+    div0.append(div1);
+
+    return div0;
+
+}
+
 const sArticulos = 
 [
     ["Gustavo Guerra García, Wildlife Conservation Society / Análisis del Proyecto: Hidrovía Amazónica - Ríos Marañón, Amazonas, Huallaga y Ucayali",
@@ -662,7 +686,7 @@ let articulosDesktop = function(array) {
 
 let articulosMobile = function(array, index) {
 
-    let div0 = $("<div class='card card-articles-mobile col-sm-12' data-clickable='true' data-toggle='modal' data-target='#articles-modal' id='card-articles-"+index+"'></div>");
+    let div0 = $("<div class='card card-articles-mobile col-sm-12' data-clickable='true' id='card-articles-"+index+"'></div>");
     let div1 = $("<div class='card-body'></div>");
     let p0 = $("<p class='card-text font-weight-bold'>" + array[0] + "</p>");
     let p1 = $("<p class='card-text'>" + array[1] + "</p>");
@@ -696,6 +720,8 @@ let articlesList = $(".articles-list");
 let wrapperArticlesMobile = $(".articles-mobile-content");
 
 $(document).ready(function() {
+
+    $("#wrapper-map").append(contactoMapaModal());
 
     //cardMobile.eq(1).css("margin-left", "5.3rem");
     //cardMobile.eq(3).css("margin-left", "5.3rem");

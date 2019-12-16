@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="email">E-mail</label>
-                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
                                     <small id="emailHelp" class="form-text text-muted">Mantendremos los datos brindados en privacidad.</small>
                                 </div>
                                 <div class="form-group">
@@ -67,24 +67,28 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="mensaje">Mensaje</label>
-                                    <textarea class="form-control" id="mensaje" rows="3"></textarea>
+                                    <textarea class="form-control" id="mensaje" rows="3" required></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Enviar</button>
                             </form>
                         </div>
                     </div>
                 </div>
-                    <div class="col-sm-12 col-lg-4 contact-container offset-lg-1 d-none d-lg-block">
-                        <h2></h2>
-                        <div class="row contact-content-container">
-                            <div class="col-sm-12">
-                                <p class="contact-text">Calle Los Cedros 285, San Isidro</p>
-                            </div>
+                <div class="col-sm-12 col-lg-4 contact-container offset-lg-1 d-none d-lg-block">
+                    <h2></h2>
+                    <div class="row contact-content-container">
+                        <div class="col-sm-12">
+                            <a class="contact-link" href="#" id="map-link" data-toggle='modal' data-target='#contact-map-modal'><span class="icon-map2 map-logo"></span> &nbsp;  Calle Los Cedros Nº 285, San Isidro - Lima</a>
+                            <p class="contact-text"></p>
                         </div>
-                    </div>   
+                    </div>
+                </div>   
             </div>
         </div>
 
+        <div id="wrapper-map">
+
+        </div>
     </div>
 
     <div class="footer">
@@ -95,13 +99,13 @@
                         <img src="resources/imagenes/logo-dee-2.gif" alt="">
                         <br>
                         <br>
-                        <p class="footer-text">Administración y Proyectos: <br> (511) 322 0329 - (511) 322 0330 <br> (511) 914 980 171 <br> administrativo@deeconsultores.pe</p>
+                        <p class="footer-text">Administración y Proyectos: <br> (511) 322 0329 - (511) 322 0330 <br> (511) 914 980 171 <br> <a class="contact-mail" href="mailto:administrativo@deeconsultores.pe">administrativo@deeconsultores.pe</a></p>
                     </div>
                     <div class="col-sm-12 d-block d-sm-none">
                             <img src="resources/imagenes/logo-dee-2.gif" alt="">
                             <br>
                             <br>
-                            <p class="footer-text">Administración y Proyectos: <br> (511) 322 0329 - (511) 322 0330 <br> (511) 914 980 171 <br> administrativo@deeconsultores.pe</p>
+                            <p class="footer-text">Administración y Proyectos: <br> (511) 322 0329 - (511) 322 0330 <br> (511) 914 980 171 <br> <a class="contact-mail" href="mailto:administrativo@deeconsultores.pe">administrativo@deeconsultores.pe</a></p>
                         </div>
                     <div class="col-4 offset-1 d-none d-md-block">
                         <ul class="footer-list">
