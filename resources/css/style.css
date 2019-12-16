@@ -222,6 +222,23 @@ tbody {
     padding: 0.375rem 0;;
 }
 
+.articles-text {
+    font-size: 0.8rem;
+    color: #134060;
+    padding: 0.375rem 0;
+}
+
+.articles-pdf {
+    float: right;
+    padding-bottom: 1rem;
+}
+
+.card-articles-mobile {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
 /*  CLIENTES */
 
 .customers-text {
@@ -282,11 +299,12 @@ tbody {
     padding-bottom: 2rem;
 }
 
-.card[data-clickable=true] {
+.card.card-team-mobile[data-clickable=true] {
     cursor: pointer;
 }
 
-.card-team-mobile {
+.card-team-mobile,
+.card-articles-mobile {
     margin-top: 0;
     margin-bottom: 2rem;
 }
@@ -397,7 +415,8 @@ ul.footer-social-list {
 }
 
 @media (min-width: 768px) {
-    .card.card-team-mobile:nth-child(n)/*,
+    .card.card-team-mobile:nth-child(n)
+    /*,
     .card.card-team-mobile:nth-child(5)*/ {
         margin-left: 1.85rem;
         margin-right: 1.85rem;

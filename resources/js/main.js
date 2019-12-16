@@ -611,6 +611,69 @@ let equipoMobileModal = function(array) {
     return div0;
 }
 
+const sArticulos = 
+[
+    ["Gustavo Guerra García, Wildlife Conservation Society / Análisis del Proyecto: Hidrovía Amazónica - Ríos Marañón, Amazonas, Huallaga y Ucayali",
+    "El objetivo central del proyecto denominado “Mejoramiento y Mantenimiento de las Condiciones de Navegabilidad en los Ríos Huallaga, Ucayali, Marañón y Amazonas” es implementar un conjunto importante de obras y acciones destinado a la mejora de las condiciones de navegabilidad en estas vías fluviales y así obtener un tráfico de pasajeros y cargas eficiente, económico, seguro y confiable, durante todo el año.",
+    "resources/pdf/articulo_201905.pdf"
+    ],
+    ["Miguel Prialé Ugás / La competitividad de Lima necesita inversión en infraestructura vial",
+    "Un análisis comparativo entre las principales ciudades de Latinoamérica sobre las actuales condiciones viales nos revela las oportunidades y retos que tenemos en nuestra ciudad para enfrentar su crecimiento, logrando conjugar lo urbanístico con lo económico, con un adecuado desarrollo de la infraestructura vial y el reordenamiento del transporte público, apuntando a generar una cultura del cuidado del medio ambiente y mejoras en la productividad personal y empresarial de sus ciudadanos, amalgamando todos estos aspectos en torno a una lógica obvia y simple: priorizar primero al peatón, en seguida al ciclista, luego el bus o tren y finalmente el auto privado.",
+    "resources/pdf/articulo_201402b.pdf"
+    ],
+    ["Miguel Prialé Ugás / Obras por impuestos: ventajas, desventajas y desafíos",
+    "Desde su creación en el 2008, son 36 las empresas que vienen financiando obras públicas a través de la modalidad de Obras por Impuestos. Al cierre del 2013, Proinversión reporta avances significativos plasmados en nuevas alianzas entre 28 gobiernos sub-nacionales y 23 empresas privadas, totalizando más de S/.403 millones para dicho año. En este artículo se exponen las principales ventajas, desafío y riesgos del funcionamiento de esta nueva modalidad de ejecución para el desarrollo de proyectos de inversión pública.",
+    "resources/pdf/articulo_201402.pdf"
+    ],
+    ["Miguel Prialé Ugás / SNIP para todos. Guía amigable para navegar en la burocracia de los proyectos",
+    "Reseña",
+    "resources/pdf/articulo_201310.pdf"
+    ],
+    ["Miguel Prialé Ugás / SNIP for All. Friendly Guide to Navigate through the Bureaucracy of Projects",
+    "Reseña",
+    "resources/pdf/articulo_201310b.pdf"
+    ],
+    ["Diego Cueto, Miguel Prialé / Investigación y evaluación en el Estado. Políticas públicas en infraestructura económica de transportes, saneamiento y energía",
+    "El presente documento analiza la relación entre investigación y políticas públicas, desde los recientes esfuerzos del Estado para mejorar su desempeño y la calidad del gasto, especialmente en la inversión en infraestructura económica. Para ello, se toman los resultados de casos de programas y proyectos de inversión en Perú y América Latina especialmente en los sectores transportes, saneamiento y energía. El documento resalta la importancia de la investigación aplicada en el marco de las actuales reformas para mejorar los resultados de la gestión y los servicios públicos.",
+    "resources/pdf/articulo_201308.pdf"]
+];
+
+// Cambio de color de Menú de Equipo en Desktop
+let articlesListColor = function(element) {
+    articlesList.find('a').eq(0).css("color", "#134060");
+    articlesList.find('a').eq(1).css("color", "#134060");
+    articlesList.find('a').eq(2).css("color", "#134060");
+    articlesList.find('a').eq(3).css("color", "#134060");
+    articlesList.find('a').eq(4).css("color", "#134060");
+    articlesList.find('a').eq(5).css("color", "#134060");
+    element.css("color", "#909090");
+}
+
+let articulosDesktop = function(array) {
+
+    let div0 = $("<div clas='articles-desktop-abstract'></div>");
+    let p0 = $("<p>" + array[1] + "</p>");
+    let a0 = $("<a class='articles-pdf article-link' href='" + array[2] + "' target='_blank'>Descargar documento</a>");
+
+    div0.append(p0, a0);
+
+    return div0;
+}
+
+let articulosMobile = function(array, index) {
+
+    let div0 = $("<div class='card card-articles-mobile col-sm-12' data-clickable='true' data-toggle='modal' data-target='#articles-modal' id='card-articles-"+index+"'></div>");
+    let div1 = $("<div class='card-body'></div>");
+    let p0 = $("<p class='card-text font-weight-bold'>" + array[0] + "</p>");
+    let p1 = $("<p class='card-text'>" + array[1] + "</p>");
+    let a0 = $("<a class='articles-pdf article-link' href='" + array[2] + "' target='_blank'>Descargar documento</a>");
+
+    div1.append(p0, p1, a0);
+    div0.append(div1);
+
+    return div0;
+}
+
 // Wrappers existentes en el DOM
 let wrapperDesktop = $(".wrapper-desktop");
 let wrapperMobile = $(".wrapper-mobile");
@@ -625,14 +688,29 @@ let servicesList = $(".services-list");
 let teamList = $(".team-list");
 // Wrapper de Modal en Mobile
 let wrapperModalTeamMobile = $("#team-modal-wrapper");
+// Wrapper Articles Desktop
+let wrapperArticlesDesktop = $(".articles-desktop-body");
+// Menú de Articles en Desktop
+let articlesList = $(".articles-list");
+// Wrapper Articles Mobile
+let wrapperArticlesMobile = $(".articles-mobile-content");
 
 $(document).ready(function() {
 
     //cardMobile.eq(1).css("margin-left", "5.3rem");
     //cardMobile.eq(3).css("margin-left", "5.3rem");
 
+    //Cargar Artículos en Mobile al inicio
+    sArticulos.forEach(function(element, index) {
+        wrapperArticlesMobile.append(articulosMobile(element, index))
+    });
+
+    // Cargar primer artículo de Artículos en Desktop
+    wrapperArticlesDesktop.append(articulosDesktop(sArticulos[0]));
+
     // Cargar título de Servicios en Desktop al inicio
     servicesList.find('a').eq(0).css("color", "#909090");
+    articlesList.find('a').eq(0).css("color", "#909090");
     wrapperDesktopTitle.append(hFormulacion());
 
     // Cargar tabla de Servicios en Desktop al inicio
@@ -847,4 +925,47 @@ $(document).ready(function() {
             wrapperModalTeamMobile.append(equipoMobileModal(element));
         });
     });
+
+    articlesList.find('a').eq(0).click(function() {
+        articlesListColor($(this));
+        wrapperArticlesDesktop.empty();
+        wrapperArticlesDesktop.append(articulosDesktop(sArticulos[0]));
+        return false;
+    });
+
+    articlesList.find('a').eq(1).click(function() {
+        articlesListColor($(this));
+        wrapperArticlesDesktop.empty();
+        wrapperArticlesDesktop.append(articulosDesktop(sArticulos[1]));
+        return false;
+    });
+
+    articlesList.find('a').eq(2).click(function() {
+        articlesListColor($(this));
+        wrapperArticlesDesktop.empty();
+        wrapperArticlesDesktop.append(articulosDesktop(sArticulos[2]));
+        return false;
+    });
+
+    articlesList.find('a').eq(3).click(function() {
+        articlesListColor($(this));
+        wrapperArticlesDesktop.empty();
+        wrapperArticlesDesktop.append(articulosDesktop(sArticulos[3]));
+        return false;
+    });
+
+    articlesList.find('a').eq(4).click(function() {
+        articlesListColor($(this));
+        wrapperArticlesDesktop.empty();
+        wrapperArticlesDesktop.append(articulosDesktop(sArticulos[4]));
+        return false;
+    });
+
+    articlesList.find('a').eq(5).click(function() {
+        articlesListColor($(this));
+        wrapperArticlesDesktop.empty();
+        wrapperArticlesDesktop.append(articulosDesktop(sArticulos[5]));
+        return false;
+    });
+
 });
