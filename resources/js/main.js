@@ -995,6 +995,7 @@ $(document).ready(function() {
     });
 
     $("#phone").keypress(function(evento) {
+
         let charCode = (evento.which) ? evento.which : evento.keyCode
 
         if(charCode > 31 && (charCode < 48 || charCode > 57)) {
@@ -1006,6 +1007,9 @@ $(document).ready(function() {
     });
 
     $("#name").keypress(function(evento) {
+
+        $("#nameAlert").addClass("hiddenAlert");
+
         let charCode = (evento.which) ? evento.which : evento.keyCode
 
         if((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8 || charCode == 32) {
@@ -1014,5 +1018,77 @@ $(document).ready(function() {
 
         return false;
     });
+
+    $("#email").keypress(function(evento) {
+        $("#emailAlert").addClass("hiddenAlert");
+        let charCode = (evento.which) ? evento.which : evento.keyCode
+    });
+
+    $("#message").keypress(function(evento) {
+        $("messageAlert").addClass("hiddenAlert");
+        let charCode = (evento.which) ? evento.which : evento.keyCode
+    });
+
+    const clearForm = function() {
+        $("#name").val("");
+        $("#email").val("");
+        $("#phone").val("");
+        $("#message").val("");
+    }
+
+    let mailing = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+    $("#submitContact").click(function() {
+
+        if($("#name").val().length < 1) {
+            $("#nameAlert").removeClass("hiddenAlert");
+            //console.log("nombre vacío")
+        }else if($("#email").val().length < 1) {
+            $("#emailAlert").removeClass("hiddenAlert");
+            //console.log("email vacío")
+        }else if($("#message").val().length < 1) {
+            $("#messageAlert").removeClass("hiddenAlert");
+            //console.log("mensaje vacío")
+        }else {
+            if(mailing.test($("#email").val()) == true) {
+                //console.log("match");
+                //$("[name='frmContact'").submit();
+
+                var phoneEmpty = '';
+
+                if($("#phone").val().length < 1) {
+                    phoneEmpty = "-";
+                }else {
+                    phoneEmpty = $("#phone").val()
+                }
+
+                var data = {
+                    name: $("#name").val(),
+                    email: $("#email").val(),
+                    phone: phoneEmpty,
+                    message: $("#message").val()
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "contacto.php",
+                    data: data,
+                    success: function() {
+                        alert("Mensaje enviado");
+                        clearForm();
+                    }
+
+                });
+
+            }else {
+                $("#emailAlert").text("Ingrese un correo electrónico válido");
+                $("#emailAlert").removeClass("hiddenAlert");
+                //console.log("no match");
+            }
+        }
+
+        return false;
+
+    })
 
 });
