@@ -1050,6 +1050,7 @@ $(document).ready(function() {
             $("#messageAlert").removeClass("hiddenAlert");
             //console.log("mensaje vacío")
         }else {
+
             if(mailing.test($("#email").val()) == true) {
                 //console.log("match");
                 //$("[name='frmContact'").submit();
@@ -1061,6 +1062,10 @@ $(document).ready(function() {
                 }else {
                     phoneEmpty = $("#phone").val()
                 }
+
+                $("#nameAlert").addClass("hiddenAlert");
+                $("#emailAlert").addClass("hiddenAlert");
+                $("#messageAlert").addClass("hiddenAlert");
 
                 var data = {
                     name: $("#name").val(),
@@ -1076,6 +1081,9 @@ $(document).ready(function() {
                     success: function() {
                         alert("Mensaje enviado");
                         clearForm();
+                    },
+                    error: function() {
+                        alert("El mensaje no pudo ser enviado");
                     }
 
                 });

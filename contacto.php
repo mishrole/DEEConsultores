@@ -1,6 +1,6 @@
 <?php
 
-    $to = "mitchell.rodriguez@deeconsultores.pe";
+    $to = "contacto@deeconsultores.pe";
     $subject = "[deeconsultores.pe] Mensaje de Contacto";
 
     $name = $_POST["name"];
@@ -13,9 +13,5 @@
     $header = 'Content-Type: text/html; charset=UTF-8; From: ' . $mail;
 
     mail($to, $subject, $body, $header);
-    //header("Location: contacto.html?enviado");
-
-	//$EMAIL_CONTACTO = "manuel_chc@yahoo.com";
-	//mail("contacto@deeconsultores.pe", "[Web site de DEE] Solicitud de Contacto", $EMailMensaje,"From: ".$HTTP_POST_VARS["email"]."\nReply-To: ".$HTTP_POST_VARS["email"]."\n");
-	//mail("mitrodle@gmail.com", "[Web site de DEE] Solicitud de Contacto", $EMailMensaje,"From: ".$HTTP_POST_VARS["email"]."\nReply-To: ".$HTTP_POST_VARS["email"]."\n");
+    
 ?>
