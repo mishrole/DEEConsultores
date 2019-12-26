@@ -104,7 +104,8 @@ h4 {
 .customers-content,
 .team-content,
 .contact-content,
-.articles-content {
+.articles-content,
+.consult-content {
     margin-top: 3.5rem;
 }
 
@@ -242,6 +243,10 @@ tbody {
     border-top: none;
     border-right: none;
     border-left: none;
+}
+
+.card-body {
+    color: #0F3F61;
 }
 
 /*  CLIENTES */
