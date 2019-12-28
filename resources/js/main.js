@@ -1021,12 +1021,12 @@ $(document).ready(function() {
 
     $("#email").keypress(function(evento) {
         $("#emailAlert").addClass("hiddenAlert");
-        let charCode = (evento.which) ? evento.which : evento.keyCode
+        //let charCode = (evento.which) ? evento.which : evento.keyCode
     });
 
     $("#message").keypress(function(evento) {
-        $("messageAlert").addClass("hiddenAlert");
-        let charCode = (evento.which) ? evento.which : evento.keyCode
+        $("#messageAlert").addClass("hiddenAlert");
+        //let charCode = (evento.which) ? evento.which : evento.keyCode
     });
 
     const clearForm = function() {
