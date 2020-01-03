@@ -1,6 +1,6 @@
 <?php
 
-    $to = "contacto@deeconsultores.pe";
+    $to = "mitchell.rodriguez@deeconsultores.pe";
     $subject = "[deeconsultores.pe] Mensaje de Contacto";
 
     $name = $_POST["name"];

@@ -560,6 +560,37 @@ let contactoMapaModal = _ => {
     return div0;
 }
 
+let contactoMensaje = function(estado) {
+
+    let titleForm = '';
+    let messageForm = '';
+
+    if(estado == 0) {
+        titleForm = "El mensaje no pudo ser enviado";
+        messageForm = "Por favor, inténtelo nuevamente más tarde.";
+    }else if (estado == 1) {
+        titleForm = "¡Mensaje enviado con éxito!";
+        messageForm = "Nos pondremos en contacto con usted a la brevedad posible.";
+    }
+
+    let div0 = $("<div class='modal fade' id='contact-modal-message' tabindex='-1' role='dialog' aria-hidden='true'></div>");
+    let div1 = $("<div class='modal-dialog modal-dialog-centered' role='document'></div>");
+    let div2 = $("<div class='modal-content'></div>");
+    let div3 = $("<div class='modal-header'>");
+    let h5 = $("<h5 class='modal-title team-text font-weight-bold'>" + titleForm + "</h5>");
+    let div4 = $("<div class='modal-body'></div>");
+    let p0 = $("<p class='modal-text team-text'>" + messageForm + "</p>");
+    let div5 = $("<div class='modal-footer'></div>");
+    let button0 = $("<button type='button' class='btn btn-secondary' data-dismiss='modal'>Cerrar</button>");
+    div3.append(h5);
+    div4.append(p0);
+    div5.append(button0);
+    div2.append(div3, div4, div5);
+    div1.append(div2);
+    div0.append(div1);
+    return div0;
+}
+
 const sArticulos = 
 [
     ["Gustavo Guerra García, Wildlife Conservation Society / Análisis del Proyecto: Hidrovía Amazónica - Ríos Marañón, Amazonas, Huallaga y Ucayali",
@@ -965,11 +996,13 @@ $(document).ready(function() {
                     url: "contacto.php",
                     data: data,
                     success: function() {
-                        alert("Mensaje enviado");
+                        $("#wrapper-message").append(contactoMensaje(1));
+                        $("#contact-modal-message").modal('show');
                         clearForm();
                     },
                     error: function() {
-                        alert("El mensaje no pudo ser enviado");
+                        $("#wrapper-message").append(contactoMensaje(0));
+                        $("#contact-modal-message").modal('show');
                     }
                 });
             }else {
