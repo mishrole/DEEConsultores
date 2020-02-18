@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /old-2019/
+Disallow: /cgi-bin/
+
+Sitemap: https://deeconsultores.pe/sitemap.xml
