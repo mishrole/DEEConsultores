@@ -510,21 +510,25 @@ ul.footer-social-list {
     src: url('fonts/Helvetica-Bold.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
    }
    @font-face {
     font-family: 'titulo-roman';
     src: url('../../utilities/fonts/Akzidenz-Grotesk-Roman.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: fallback;
    }
    @font-face {
     font-family: 'titulo-bold';
     src: url('../../utilities/fonts/Berthold-Akzidenz-Grotesk-BE-Bold.ttf') format('truetype');
     src: url('../../utilities/fonts/AkzidenzGroteskBE-Bold.otf') format('opentype');
     font-style: normal;
+    font-display: fallback;
    }
    @font-face {
     font-family: 'texto-light';
     src: url('../../utilities/fonts/Berthold-Akzidenz-Grotesk-BE-Light.ttf') format('truetype');
     font-style: normal;
+    font-display: fallback;
    }
